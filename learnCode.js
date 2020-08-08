@@ -131,11 +131,20 @@ class Game {
         this.level = 0;
         this.levelObj = null;
         this.commands = []
-        this.levelsData = [{
+        this.levelsData = [
+            {
                 level: "se",
                 buttons: {
                     DragFront: 2,
                     DragLeft: 0,
+                    DragRight: 0
+                }
+            },
+            {
+                level: "sfle",
+                buttons: {
+                    DragFront: 2,
+                    DragLeft: 1,
                     DragRight: 0
                 }
             },
@@ -148,6 +157,14 @@ class Game {
                 }
             },
             {
+                level: "slfrfflffrfe",
+                buttons: {
+                    DragFront: 7,
+                    DragLeft: 2,
+                    DragRight: 2
+                }
+            },
+            {
                 level: "sflfrffre",
                 buttons: {
                     DragFront: 5,
@@ -155,6 +172,7 @@ class Game {
                     DragRight: 2
                 }
             },
+
         ]
         // Animation
         this.isSceneOut = false;
@@ -415,10 +433,10 @@ class Game {
         }
     }
 
-    toggleInstructions(){
-        if(this.instructions){
+    toggleInstructions() {
+        if (this.instructions) {
             document.getElementById("instructionsModal").style.display = "none";
-        }else{
+        } else {
             document.getElementById("instructionsModal").style.display = "flex";
         }
         this.instructions = !this.instructions;
